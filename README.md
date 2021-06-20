@@ -8,3 +8,5 @@ What it does:
 - Send KeepAlive messages to clients on a regular basis (set KeepAlivePeriod in VoxelMultiplayerManager.h)
 - Make Clients close their Socket when they did not receive anything from the Server for KeepAlivePeriod*1.5
 - Add BlueprintNode "BindOnDisconnect" that allows to bind a delegate that get's called on the Client after it's Socket was closed
+
+This is an ongoing effort to improve the Plugin's multiplayer. If you encounter issues please share them and feel free to contribute!
