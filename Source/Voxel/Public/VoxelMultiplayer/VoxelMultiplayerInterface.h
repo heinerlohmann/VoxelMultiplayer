@@ -16,6 +16,7 @@ class IVoxelMultiplayerServer;
 
 // addition by hein0r
 DECLARE_DYNAMIC_DELEGATE(FOnDisconnectDelegate);
+DECLARE_DYNAMIC_DELEGATE(FOnLoadRemoteSaveDelegate);
 
 UCLASS(Abstract, BlueprintType)
 class VOXEL_API UVoxelMultiplayerInterface : public UObject
@@ -27,6 +28,7 @@ public:
 
 	// additions by hein0r
 	FOnDisconnectDelegate OnDisconnectDelegate;
+	FOnLoadRemoteSaveDelegate OnLoadRemoteSaveDelegate;
 
 	virtual bool IsServer() const { unimplemented(); return false; }
 	virtual TVoxelSharedPtr<IVoxelMultiplayerClient> CreateClient() const { unimplemented(); return nullptr; }

@@ -121,6 +121,12 @@ void FVoxelMultiplayerManager::ReceiveData()
 			UVoxelSaveUtilities::DecompressVoxelSave(Save, DecompressedSave);
 
 			UVoxelDataTools::LoadFromSave(Settings.VoxelWorld.Get(), DecompressedSave, {});
+
+			auto* MultiplayerInterfaceInstance = Settings.VoxelWorld->GetMultiplayerInterfaceInstance();
+			if (MultiplayerInterfaceInstance)
+			{
+				MultiplayerInterfaceInstance->OnLoadRemoteSaveDelegate.ExecuteIfBound();
+			}
 		}
 		break;
 	}

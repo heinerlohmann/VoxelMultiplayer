@@ -28,6 +28,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Voxel|Multiplayer|Tcp")
 	void BindOnDisconnect(const FOnDisconnectDelegate& OnDisconnect);
 
+	// addition by hein0r
+	/**
+	* Bind Event to execute on Disconnect (called on Client only).
+	* @param	OnDisconnect	Will be executed if connection timed out.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Voxel|Multiplayer|Tcp")
+	void BindOnLoadRemoteSave(const FOnLoadRemoteSaveDelegate& OnLoadRemoteSave);
+
 	/**
 	 * Connect to a TCP server
 	 * @param	Ip		The IPv4 of the server

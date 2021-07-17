@@ -17,6 +17,11 @@ void UVoxelMultiplayerTcpInterface::BindOnDisconnect(const FOnDisconnectDelegate
 	OnDisconnectDelegate = OnDisconnect;
 }
 
+void UVoxelMultiplayerTcpInterface::BindOnLoadRemoteSave(const FOnLoadRemoteSaveDelegate& OnLoadRemoteSave)
+{
+	OnLoadRemoteSaveDelegate = OnLoadRemoteSave;
+}
+
 // original code:
 bool UVoxelMultiplayerTcpInterface::ConnectToServer(FString& OutError, const FString& Ip, int32 Port)
 {
