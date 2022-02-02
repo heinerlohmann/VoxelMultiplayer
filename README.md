@@ -1,7 +1,7 @@
 # VoxelMultiplayer
 Some modifications on the MP-code of the Voxel Plugin for Unreal Engine: https://www.unrealengine.com/marketplace/en-US/product/voxel-plugin-pro
 
-This code will not compile with the Marketplace version! Use this instead: https://gitlab.com/Phyronnaz/VoxelPluginPro
+This code will not compile with the Marketplace version! Use this instead: https://github.com/Phyronnaz/VoxelPlugin
 
 See guides channel on the plugin's discord to learn how you get access.
 
